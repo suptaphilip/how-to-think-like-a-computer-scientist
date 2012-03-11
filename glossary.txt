@@ -1,0 +1,299 @@
+1. The way of the program
+algorithm - A general process for solving a category of problems.
+bug - An error in a program.
+byte code - An intermediate language between source code and object code. Many modern languages first compile source code into byte code and then interpret the byte code with a program called a virtual machine.
+compile - To translate a program written in a high-level langauge into a low-level language all at once, in preparaion for later execution.
+debugging - The process of finding and removing any of the three kinds of programming errors.
+exception - Another name for a runtime error.
+executable - Another name for object code that is ready to be executed.
+formal language - Any one of the languages that people have designed for specific purposes, such as representing mathematical ideas or computer programs; all programming languages are formal languages.
+high-level language - A programming language like Python that is designed to be easy for humans to read and write.
+interpret - To execute a program in a high-level language by translating it one line at a time.
+low-level language - A programming language that is desgined to be easy for a computer to execute; also called machine language or assembly language.
+natural language - Any one of the languages that people speak that evolved naturally.
+object code - The output of the compiler after it translates the program.
+parse - To examine a program and analyze the syntactic structure.
+portability - A property of a program that can run on more than one kind of computer.
+print statement - An instruction that causes the Python interpreter to display a value on the screen.
+problem solving - The process of formulating a problem, finding a solution, and expressing the solution.
+program - A sequence of instructions that specifies to a computer actions and computations to be performed.
+Python shell - An interactive user interface to the Python interpreter. The user of a Python shell types commands at the prompt (>>>), and presses the return key to send these commands immediately to the interpreter for processing.
+runtime error - An error that does not occur until the program has started to execute but that prevents the program from continuing.
+script - A program stored in a file (usually on that will be interpreted).
+semantic error - An error in a program that makes it do something other than what the programmer intended.
+semantics - The meaning of a program.
+source code - A program in a high-level language before being compiled.
+syntax - The structure of a program.
+syntax error - An error in a program that makes it impossible to parse - and therefore impossible to interpret.
+token - One of the baisc elements of the syntactic structure of a program, analogous to a word in a natural langauge.
+
+2. Variables, expressions and statements
+assignment operator - = is Python's assignment operator, which should not be confused with the mathematical comparison operator using the same symbol.
+assignment statement - A statement that assigns a value to a name (variable). To the left of the assignment operator, =, is a name. To the right of the assignment operator is an expression which is evaluated by the Python interpreter and then assigned to the name. The difference between the left and right hand sides of the assignment statement is often confusing to new programmers. In the following assignment: n = n + 1, n plays a very different role on each side of the =. On the right it is a value and makes up part of the expression which will be evaluated by the Python interpreter before assigning it to the name on the left.
+comment - Information in a program that is meant for other programmers (or anyone reading the source code) and has no effect on the execution of the program.
+composition - The ability to combine simple expressions and statements into compound statemens and expressions in order to represent complex computations concisely.
+concatenate - To join two strings end-to-end.
+data type - A set of values. The type of a value determines how it can be used in expressions. So far, the types you have seen are integers (type int), floating-point numbers (type float), and strings (type str).
+evaluate - To simplify an expression by performing the operations in order to yield a single value.
+expression - A combination of variables, operators, and values that represents a single result value.
+float - A Python data type which stores floating-point numbers. Floating-point numbers are stored internally in two parts: a base and an exponent. When printed in the standard format, they look like decimal numbers. Beware of rounding errors when you use floats, and remember that they are only approximate values.
+int - A Python data type that holds positive and negative whole numbers.
+integer division - An operation that divides one integer by another and yields and integer. Integer division yields only the whole number of times that the numerator is divisible by the denominator and discards any remainder.
+keyword - A reserved word that is used by the compiler to parse program; you cannot use keywords like if, def, and while as variable names.
+operand - One of the values on which an operator operates.
+operator - A special symbol that represents a simple computation like addition, multiplication, or string concatenation.
+rules of precedence - The set of rules governing the order in which expressions involving multiple operators and operands are evaluated.
+state diagram - A graphical representation of a set of variables and the values to which they refer.
+statement - An instruction that the Python interpreter can execute. Examples of statements include the assignment statement and the print statement.
+str - A Python data type that holds a string of characters.
+value - A number or string (or other things to be named later) that can be stored in a variable or computer in an expression.
+variable - A name that refers to a value.
+variale name - A name given to a variable. Variable names in Python consist of a swquence of letters (a..z, A..Z, and _) and digits (0..9) that begins with a letter. In best programming practice, variable names should be chosen so that they describe their use in the program, making the program self documenting.
+
+3. Functions
+argument - A value provided to a function when the function is called. This value is assigned to the corresponding parameter in the function.
+body - The second part of a compound statement. The body consists of a sequence of statements all indented the same amount from the beginning of the header. the standard amount of indentation used within the Python community is 4 spaces.
+compound statement - A statement that consists of two parts: 1. header - which begins with a keyword determining the statement type, and ends with a colon. 2. body - containing one or more statements indented the same amount from the header. The syntax of a compound statement looks like this:keyword expression: statement statement ...
+flow of execution - The order in which statements are executed during a program run.
+frame - A box in a stack diagram that represent a function call. It contains the local variables and parameters of the function.
+function - A named sequence of statements that performs some useful operation. Functions may or may not take parameters and may or may not produce a result.
+function call - A statement that executes a function. It consists of the name of the function followed by a list of arguments enclosed in parentheses.
+function composition - Using the output from one function call as the input to another.
+function definition - A statement that creates a new function, specifying its name, parameters, and the statements it executes.
+header - The first part of a compound statement. Headers begin with a keyword and end with a colon (:)
+import - A statement which permits functions and variables defined in a Python script to be brought into the environment of another script or a running Python shell. For example, assume the following is in a script named tryme.py: def print_thrice(thing): print thing, thing, thing n = 42 s = "And now for something completely different..." Now begin a python shell from within the same directory where tryme.py is located: $ ls tryme.py $ python >>> Three names are defined in tryme.py: print_thrice, n, and s. If we try to access any of these in the shell without first importing, we get an error: >>> n Traceback (most recent call last): File "<stdin>", line 1, in <module> NameError: name 'n' is no defined >>> print_thrice("ouch!") Traceback (most recent call last): File "<stdin>", line 1, in <module> NameError: name 'print_thrice' is not defined If we import everything from tryme.py, however, we can use everything defined in it: >>> from tryme import * >>> n 42 >>> s 'And now for something completely different...' >>> print_thrice("Yipee!") Yipee! Yipee! Yipee! >>> Note that you do not include the .py from the script name in the import statement.
+local variable - A variable defined inside a function. A local variable can only be used inside its function.
+parameter - A name used inside a function to refer to the value passed as an argument.
+stack diagram - A graphical representation of a stack of function, their variables, and the values to which they refer.
+traceback - A list of the functions that are executing, printed when a runtime error occurs. A traceback is also commonly refered to as a stack trace, since it lists the functions in the order in which they are stored in the runtime stack.
+
+4. Conditionals
+block - A group of consecutive statements with the same indentation.
+body - The block of statements in a compound statement that follows the header.
+boolean expression - An expression that is either true or false.
+boolean value - There are exactly two boolean values: True and False. Boolean values result when a boolean expression is evaluated by the Python interpreter. They have type bool.
+branch - One of the possible paths of the flow of execution determined by conditional execution.
+chained conditional - A conditional branch with more than two possible flows of execution. In Python chained conditionals are written with if ... elif ... else statements.
+comparison operator - One of the operators that compares two values: ==, !=, >, <, >=, and <=.
+condition - The boolean expression in a conditional statement that determines which branch is executed.
+conditional statement - A statement that controls the flow of execution depending on some condition. In Python the keywords if, elif, and else are used for conditional statements.
+logical operator - One of the operators that combines boolean expressions: and, or, and not.
+modulus operator - An operator, denoted with a percent sign (%), that works on integers and yields the remainder when one number is divided by another.
+nesting - One program structure within another, such as a conditional statement inside a branch of another conditional statement.
+prompt - A visual cue that tells the user to input data.
+type conversion - An explicit statement that takes a value of one type and computes a corresponding value of another type.
+wrapping code in a function - The process of adding a function header and parameters to a sequence of pogram statements is often referred to as "wrapping the code in a funtion". This process is very useful whenever the program statements in question are going to be used multiple times.
+
+5. Fruitful functions
+boolean function - A function that returns a boolean value.
+composition (of functions) - Calling one function from within the body of another, or using the return value of one function as an argument to the call of another.
+dead code - Part of a program that can never be executed, often because it appears after a return statement.
+fruitful function - A function that yields a return value.
+incremental development - A program development plan intended to avoid debugging by adding and testing only a small amount of code at a time.
+None - A special Python value returned by functions that have no return statement, or a return statement without an argument. None is the only value of the type, NoneType.
+return value - The value provided as a result of a function call.
+scaffolding - Code that is used during program development but is not part of the final version.
+temporary variable - A variable used to store an intermediate value in a complex calculation.
+unit testing - An automatic procedure used to validate that individual units of code are working properly. Python has doctest built in for this purpose.
+
+6. Iteration
+algorithm - A step-by-step process for solving a category of problems.
+body - The statements inside a loop.
+counter - A variable used to count something, usually initialised to zero and incremented in the body of a loop.
+cursor - An invisible marker that keeps track of where the next character will be printed.
+decrement - Decrease by 1.
+development plan - A process for developing a program. In this chapter, we demonstrated a style of development based on developing code to do simple, specific things and then encapsulating and generalizing.
+encapsulate - To divide a large complex program into components (like functions) and isolate the components from each other (by using local variables, for example).
+escape sequence - An escape character, /, followed by one or more printable characters used to designate a nonprintable character.
+generalise - To replace something unnecessarily specific (like a constant value) with something appropriately general (like a variable or parameter). Generalisation makes code more versatile, more likely to be reused, and sometimes even easier to write.
+increment - Both as a noun and as a verb, increment means to increase by 1.
+infinite loop - A loop in which the terminating condition is never satisfied.
+initialisation (of a variable) - To initialise a variable is to give it an initial value, usually in the context of multiple assignment. Since in Python variables don't exist until they are assigned values, they are initialised when they are created. In other programming languages this is not the case, and variables can be created without being initialised, in which case they have either default or garbage values.
+iteration - Repeated execution of a set of programming statements.
+loop - A statement or group of statements that execute repeatedly until a terminating condition is satisfied.
+loop variable - A variable used a part of the terminating condition of a loop.
+multiple assignment - Making more than one assignment to the same variable during the execution of a program.
+multiple assignment - Making more than one assignment to the same variable during the execution of a program.
+newline - A special character that causes the cursor to move to the beginning of the next line.
+tab - A special character that causes the cursor to move to the next tab stop on the current line.
+trace - To follow the flow of execution of a program by hand, recording the change of state of the variables and any output produced.
+
+7. Strings
+compound data type - A data type in which the values are made up of components, or elements, that are themselves values.
+default value - The value given to an optional parameter if no argument for it is provided in the function call.
+docstring - A string constant on the first line of a function or module definition (and as we will see later, in class and method definitions as well). Docstrings provide a convenient way to associate documentation with code. Docstrings are also used by the doctest module for automated testing.
+dot notation - Use of the dot operator, ., to access functions inside a module.
+immutable - A compound data type whose elements cannot be assigned new values.
+index - A variable or value used to select a member of an ordered set, such as a character from a string.
+optional parameter - A parameter written in a function header with an assignmentto a default value which it will receive if no corresponding argument is given for it in the function call.
+slice - A part of a string (substring) specified by a range of indices. More generally, a subsequence of any sequence type in Python can be created using the slice operator (sequence[start:stop]).
+traverse - To iterate through the elements of a set, performing a similar operation on each.
+whitespace - Any of the characters that move the cursor without printing visible characters. The constant string.whitespace contains all the white-space characters.
+
+8. Case Study: Catch
+abstraction - Generalisation by reducing the information content of a concept. Functions in Python can be used to group a number of program statements with a single name, abstracting out the details and making the program easier to understand.
+constant - A numerical value that does not change during the execution of a program. It is conventional to use names with all uppercase letters to represent constants, though Python programs rely on the discipline of the programmers to enforce this, since there is no language mechanism to support true constants in Python.
+nested loop - A loop inside the body of another loop.
+random - Having no specific pattern. Unpredictable. Computers are designed to be predictable, and it is not possible to get a truly random value from a computer. Certain functions produce sequences of values that appear as if they were random, and it is these psuedorandom values that we get from Python.
+trichotomy - Given any real numbers a and b, exactly one of the following relations holds: a < b, a > b, or a = b. Thus when you can establish that two of the relations are false, you can assume the remaining one is true.
+
+9. Lists
+aliases - Multiple variables that contain references to the same object.
+clone - To create a new object that has the same value as an existing object. Copying a reference to an object creates an alias but doesn't clone the object.
+delimiter - A character or string used to indicate where a string should be split.
+element - One of the values in a list (or other sequence). The bracket operator selects elements of a list.
+index - An integer variable or value that indicats an element of a list.
+list - A named collection of objects, where each object is identified by an index.
+list traversal - The sequential accessing of each element in a list.
+modifier - A function which changes its arguments inside the function body. Only mutables types can be changed by modifiers.
+mutable type - A data type in which the elements can be modified. All mutable types are compound types. Lists are mutable data types; strings are not.
+nested list - A list that is an element of another list.
+object - A thing to which a variable can refer.
+pure function - A function which has no side effects. Pure functions only make changes to the calling programs through their return values.
+sequence - Any of the data types that consist of an ordered set of elements, with each element identified by an index.
+side effect - A change in the state of a program made by calling a function that is not a result of reading the return value from the function. Side efects can only be produced by modifiers.
+step size - The interval between successive elements of a linear sequence. The third (and optional argument) to the range function is called the step size. If not specified, it defauls to 1.
+test-driven development (TDD) - A software development practice which arrives at a desired feature through a series of small, iterative steps motivated by automated tests which are written first that express increasing refinements of the desired feature. (See the Wikipedia article on Test-driven development for more information.)
+
+10. Modules and files
+argv - argv is short for argument vector and is a variablein the sys module which stores a list of command line arguments passed to a program at run time.
+attribute - A variable defined inside a module (or class or instance - as we will see later). Module attributes are accessed by using the dot operator(.).
+command line - The sequence of characters read into the command interpreter in a command line interface(see the Wikipedia article on command line interface for more information).
+command line argument - A value passed to a program along with the program's invocation at the command prompt of a command line interface (CLI).
+command prompt - A string displayed by a command line interface indicating that commands can be entered.
+continue statement - A statement that causes the current iteration of a loop to end. The flow of execution goes to the top of the loop, evaluates the condition, and proceeds accordingly.
+delimiter - A sequence of one or more characters used to specify the boundary between separate parts of text.
+directory - A named collection of files, also called a folder. Directories can contain files and other directories, which are refered to as subdirectories of the directory that contains them.
+dot operator - The dot operator (.) permits access to attributes and functions of a module (or attributes and methods of a class or instance - as we will see later).
+file - A named entity, usually sotred on a hard drive, floppy disk, or CD-ROM, that contains a stream of characters.
+file system - A method for naming, accessing, and organizing files and the data they contain.
+import statement - A statement which makes the objects contained in a module available for use within another module. There are two forms for the import statement. Using a hypothetical module named mymod containing functions f1 and f2, and variables v1 and v2, examples of these two forms include: import mymod and from mymod import f1, f2, v1, v2 The second form brings the imported objects into the namespace of the importing module, while the first form preserves a separate namespace for the imported module, requiring mymod.v1 to access the v1 variable.
+Jython - An implementation of the Python programming language written in Java. (See the Jython home page at http://www.jython.org for more information.)
+method - Function-like attribute of an object. Methods are invoked (called) on an object using the dot operator. For example: >>> s = "this is a string." >>> s.upper() 'THIS IS A A STRING.' >>> We say that the method, upper is invoked on the string, s. s is implicitly the first argument to upper.
+mode - A distinct method of operation within a computer program. Files in Python can be opened in one of the three modes: read ('r'), write ('w'), and append('a').
+module - A file containing Python definitions and statements intended for use in other Python programs. The constants of a module are made available to the other program by using the import statement.
+namespace - A syntactic container providing a context for names so that the same name can reside in different namespaces without ambiguity. In Python, modules, classes, functions and methods all form namespaces.
+naming collisions - A situation in which two or more names in a given namespace annot be unambiguously resolved. Using import string instead of from import string import * prevents naming collisions.
+non-volatile memory - Memory that can maintain its state without power. Hard drives, flash drives, and rewritable compact disks (CD-RW) are each examples of non-volatile memory.
+path - The name and location of a file within a file system. For example: /usr/share/dict/words indicates a file named words found in the dict subdirectory of the share subdirectory of the usr directory.
+pydoc - A documentation generator that comes with the Python standard library.
+standard library - A library is a collection of software used as tools in the development of other software. The standard library of a programming language is the set of such tools that are distributed with the core programming language. Python comes with an extensive standard library.
+text file - A file that contains printable charactes organized into lines separated by newline characters.
+volatile memory - Memory which requires an electrical current to maintain state. The main memory or RAM of a computer is volatile. Information stored in RAM is lost when the computer is turned off.
+
+11. Recursion and exceptions
+base case - A branch of the conditional statement in a recursive function that does not result in a recursive call.
+data structure - An organization of data for the purpose of making it easier to use.
+exception - An error that occurs at runtime.
+handle an exception - To prevent an exception from termination a program using the try and except statements.
+immutable data type - A data type which cannot be modified. Assignments to elements or slices of immutable types cause a runtime error.
+infinite recursion - A function that calls itself recursively without ever reaching the base case. Eventually, an infinite recursion causes a runtime error.
+list comprehension - A syntactic construct which enables lists to be generated from other lists using a syntax analogous to the mathematical set-builder notation.
+mutable data type - A data type which can be modified. All mutable types are compound types. List and dictionaries (see next chapter) are mutable data types: strings and tuples are not.
+raise - To signal an exception using the raise statement.
+recursion - The process of calling the function that is currently executing.
+recursive call - The statement in a recursive function with is a call to itself.
+recursive definition - A definition which defines something in terms of itself. To be useful it must include base cases which are not recursive. In this way it differs from a circular definition. Recursive definitions often provide an elegant way to express complex data structures.
+tail recursion - A recursive call that occurs as the last statement (at the tail) of a function definition. Tail recursion is considered bad practice in Python programs since a logically equivalent funtion can be written using iteration which is more efficient (see the Wikipedia article on tail recursion for more information).
+tuple - A data type that contains a sequence of elements of any type, like a list, but is immutable. Tuples can be used wherever an immutable type is required, such as a key in a dictionary (see next chapter).
+tuple assignment - An assignment to all of the elements in a tuple using a single assignment statement. Tuple assignment occurs in parallel rather than in sequence, making it useful for swapping values.
+
+12. Dictionaries
+dictionary - A collection of key-value pairs that maps from keys to values. The keys can be any immutable type, and the values can be any type.
+mapping type - A mapping type is a data type comprised of a collection of keys and associated values. Python's only built-in mapping type is the dictionary. Dictionaries implement the associative array abstract data type.
+key - A data item that is mapped to a value in a dictionary. Keys are used to look up values in a dictionary.
+kay-value pair - One of the pairs of items in a dictionary. Values are looked up in a dictionary by key.
+hint - Temporary storage of a precomputed value to avoid redundant computation.
+event - A signal such as a keyboard press, mouse click, or message from another program.
+event-driven program - A program that involves interacting with the user through events.
+event loop - A programming construct that waits for events and processes them.
+overflow - A numerical result that is too large to be represented in a numerical format.
+
+13. Classes and objects
+class - A user-defined compound type. A class can also be thought of as a template for the objects that are instances of it.
+instantiate - To create an instance of a class.
+instance - An object that belongs to a class.
+object - A compound data type that is often used to model a thing or concept in the real world.
+attribute - One of the named data items that makes up an instance.
+
+14. Classes and functions
+pure function - A function that does not modify any of the objects it receives as parameters. Most pure functions are fruitful.
+modifier - A function that changes one or more of the objects it receives as parameters. Most modifiers are void.
+functional programming style - A style of program design in which the majority of functions are pure.
+prototype development - A way of developing programs starting with a prototype and gradually testing and improving it.
+planned development - A way of developing programs that involves high-level insight into the problem and more planning than incremental development or prototype development.
+algorithm - A set of instructions for solving a class of problems by a mechanical, unintelligent process.
+
+15. Classes and methods
+object-oriented language - A language that provides features, such as user-defined classes and inheritance, that facilitate object-oriented programming.
+object-oriented programming - A style of programming in which data and the operations that manipulate it are organised into classes and methods.
+method - A function that is defined inside a class definition and is invoked on instances of that class.
+override - To replace a default. Examples include replacing a default parameter with a particular argument and replacing a default method by providing a new method with the same name.
+initialisation method - A special method that is invoked automatically when a new object is created and that initialises the object's attributes.
+operator overloading - Extending built-in operators (+, -, *, >, <, etc.) so that they work with user-defined types.
+dot product - An operation defined in linear algebra that multiplies two Points and yields a numeric value.
+scalar multiplication - An operation defined in linear algebra that multiplies each of the coordinates of a Point by a numeric value.
+polymorphic - A function that can operate on more than one type. If all the operations in a function can be applied to a type, then the function can be applied to a type.
+
+16. Sets of objects
+encode - To represent one set of values using another set of values by constructing a mapping between them.
+class attribute - A variable that is defined inside a class definition but outside any method. Class attributes are accessible from any method in the class and are shared by all instances ofthe class.
+accumulator - A variable used in a loop to accumulate a series of values, such as by concatenating them onto a string or adding them to a running sum.
+
+17. Inheritance
+inheritance - The ability to define a new class that is a modified ersion of a previously defined class.
+parent class - The class from which a child class inherits.
+child class - A new class created by inheriting from an existing class; also called a subclass.
+
+18. Linked lists
+embedded reference - A reference stored in an attribute of an object.
+linked list - A data structure that implements a collection using a sequence of linked nodes.
+node - An element of a list, usually implemented as an object that contains a reference to another object of the same type.
+cargo - An item of data contained in a node.
+link - An embedded reference used to link one object to another.
+precondition - An assertion that must be true in order for a method to work correctly.
+fundamental ambiguity theorem - A reference to a list node can be treated as a single object or as the first in a list of nodes.
+singleton - A linked list with a single node.
+wrapper - A method that acts as a middleman between a caller and a helper method, often making the method easier or less error-prone to invoke.
+helper - A method that is not invoked directly by a caller but it used by another method to perform part of an operation.
+invariant - An assertion that should be true of an object at all times (except perhaps while the object is being modified).
+
+19. Stacks
+abstract data type (ADT) - A data type (usually a collection of objects) that is defined by a set of operations but that can be implemented in a variety of ways.
+interface - The setof operations that define an ADT.
+implementation - Code that satisfies the syntactic and semantic requirements of an interface.
+client - A program (or the person who wrote it) that uses an ADT.
+provider - The code (or the person who wrote it) that implements an ADT.
+veneer - A class definition that implements an ADT with method definitions that are invocations of other methods, sometimes with simple transformations. The veneer does no significant work, but it improves or standardises the interface seen by the client.
+generic data structure - A kind of data structure that can contain data of any type.
+infix - A way of writing mathematical expressions with the operators between the operands.
+postfix - A war of writing mathematical expressions with the operators after the operands.
+parse - To read a string of characters or tokens and analyse its grammatical structure.
+token - A set of characters that are treated as a unit for purposes of parsing, such as the words in a natural language.
+delimiter - A character that is used to separate tokens, such as punctuation in a natural language.
+
+20. Queues
+queue - An ordered set of objects waiting for a service of some kind.
+Queue - An ADT that performs the operations one might perform on a queue.
+queueing policy - The rules that determine which member of a queue is removed next.
+FIFO - First In, First Out, a queueing policy in which the first member to arrive is the first to be removed.
+priority queue - A queueing policy in which each member has a priority determined by external factors. The member with the highest priority is the first to be removed.
+Priority Queue - An ADT that defines the operations one might perform on a priority queue.
+linked queue - An implementation of a queue using a linked list.
+constant time - An operation whose runtime does not depend on the size of the data structure.
+linear time - An operation whose runtime is a linear function of the size of the data structure.
+
+21. Trees
+binary tree - A tree in which each node refers to zero, one, or two dependent nodes.
+root - The topmost node in a tree, with no parent.
+leaf - A bottom-most node in a tree, with no children.
+parent - The nd that refers to a given node.
+child - One of the nodes referred to by a node.
+siblings - Nodes that share a common parent.
+level - The set of nodes equidistant from the root.
+binary operator - An operator that takes two operands.
+subexpressions - An expression in parentheses that acts as a single operand in a larger expression.
+preorder - A war to traverse a tree, visiting each node before its children.
+prefix notation - A way of writing a mathematical expression with each operator appearing before its operands.
+postorder - A way to traverse a tree, visiting the children of each node before the node itself.
+inorder - A way to traverse a tree, visiting the left subtree, then the root, and then the right subtree.
